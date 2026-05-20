@@ -1,66 +1,48 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import React from 'react';
+import dynamic from 'next/dynamic';
+import TopBanner from '@/components/layout/TopBanner';
+import Navbar from '@/components/layout/Navbar';
+import StatsBar from '@/components/home/StatsBar';
+import ServicesGrid from '@/components/home/ServicesGrid';
+import SendingOptions from '@/components/home/SendingOptions';
+import ServiceFeatures from '@/components/home/ServiceFeatures';
+import WhyUs from '@/components/home/WhyUs';
+import HelpfulTools from '@/components/home/HelpfulTools';
+import Destinations from '@/components/home/Destinations';
+import BusinessHub from '@/components/home/BusinessHub';
+import CTASection from '@/components/home/CTASection';
+import ReviewsStrip from '@/components/home/ReviewsStrip';
+import Footer from '@/components/layout/Footer';
+
+// HeroSection uses useRouter() which must NOT run during SSR prerender.
+// Loading it client-only prevents "Router action dispatched before initialization"
+// errors that silently break hydration for ALL client components on the page.
+const HeroSection = dynamic(() => import('@/components/home/HeroSection'), {
+  ssr: false,
+  loading: () => <div style={{ minHeight: '520px', background: 'var(--color-primary-dark)' }} />,
+});
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <TopBanner />
+      <Navbar />
+      <main style={{ flexGrow: 1 }}>
+        <HeroSection />
+        <StatsBar />
+        <ServicesGrid />
+        <SendingOptions />
+        <ServiceFeatures />
+        <WhyUs />
+        <HelpfulTools />
+        <Destinations />
+        <BusinessHub />
+        <CTASection />
+        <ReviewsStrip />
       </main>
-    </div>
+      <Footer />
+    </>
   );
 }
+
+

@@ -1,0 +1,229 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(26, 39, 86, 0.95); /* Deep Navy translucent */
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid var(--color-accent);
+  z-index: 999;
+  transition: all var(--transition-base);
+}
+
+.scrolled {
+  background-color: var(--color-primary-dark);
+  box-shadow: var(--shadow-md);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  max-width: 170px;
+}
+
+@media (min-width: 768px) {
+  .logoWrapper {
+    max-width: 220px;
+  }
+}
+
+.logo {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  filter: brightness(0) invert(1); /* Render the dark navy logo as white in header */
+  transition: transform var(--transition-fast);
+}
+
+.logo:hover {
+  transform: scale(1.02);
+}
+
+.desktopNav {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .desktopNav {
+    display: block;
+  }
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  gap: var(--space-6);
+}
+
+.navLink {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: var(--space-2) 0;
+  position: relative;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+  transition: width var(--transition-fast);
+}
+
+.navLink:hover {
+  color: var(--color-white);
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.active {
+  color: var(--color-white) !important;
+}
+
+.active::after {
+  width: 100%;
+}
+
+.ctaWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.ctaButton {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  padding: 0.7rem 1.6rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+  border: 1px solid var(--color-accent);
+}
+
+.ctaButton:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  box-shadow: var(--shadow-accent);
+  transform: translateY(-1px);
+}
+
+.mobileToggle {
+  background: none;
+  border: none;
+  color: var(--color-white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2);
+}
+
+@media (min-width: 1024px) {
+  .mobileToggle {
+    display: none;
+  }
+}
+
+/* Mobile Drawer */
+.mobileDrawer {
+  position: fixed;
+  top: 80px; /* Calculated matching container height */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-primary-dark);
+  z-index: 998;
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-base);
+  overflow-y: auto;
+}
+
+.drawerOpen {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-8) var(--space-6);
+  gap: var(--space-8);
+  height: calc(100% - 80px);
+}
+
+.mobileNavList {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: var(--space-6);
+}
+
+.mobileNavLink {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-white);
+  display: block;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: var(--space-3);
+}
+
+.mobileNavLink:hover {
+  color: var(--color-accent);
+  padding-left: var(--space-2);
+}
+
+.mobileActive {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+
+.mobileFooter {
+  margin-top: auto;
+  padding-top: var(--space-8);
+}
+
+.mobileCta {
+  display: block;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  padding: var(--space-4);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-accent);
+}

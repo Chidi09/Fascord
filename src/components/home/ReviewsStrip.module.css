@@ -1,0 +1,318 @@
+.section {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  padding: var(--space-4) 0;
+  border-bottom: 4px solid var(--color-primary-dark);
+  position: relative;
+  z-index: 10;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.ratingBox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.starFilled {
+  fill: #FFC72C; /* Gold star color */
+  color: #FFC72C;
+}
+
+.ratingValue {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.divider {
+  opacity: 0.5;
+}
+
+.reviewsText {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.toggleBtn {
+  background: transparent;
+  border: none;
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--color-white);
+  padding-bottom: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  position: relative;
+  z-index: 15;
+}
+
+.toggleBtn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Expandable Drawer Panel */
+.drawer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-slow) ease-in-out;
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.drawerOpen {
+  max-height: 1000px; /* Transition smoothly up to maximum content height */
+}
+
+.drawerInner {
+  padding: var(--space-8) 0;
+}
+
+.drawerHeader {
+  margin-bottom: var(--space-6);
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  background-color: rgba(26, 39, 86, 0.1);
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2);
+}
+
+.drawerTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* Carousel Layout */
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.carouselViewport {
+  overflow: hidden;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+}
+
+.reviewSlide {
+  flex-shrink: 0;
+  width: 100%;
+  padding: var(--space-2) var(--space-4);
+}
+
+.carouselBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.carouselBtn:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+  transform: scale(1.08);
+  box-shadow: var(--shadow-md);
+}
+
+.carouselBtn:active {
+  transform: scale(0.95);
+}
+
+/* Review Card */
+.reviewCard {
+  background-color: var(--color-white);
+  padding: var(--space-6);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  text-align: left;
+}
+
+.reviewCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.reviewCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.ratingStars {
+  display: flex;
+  gap: 2px;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.reviewTitle {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+  text-transform: none; /* preserve normal text casing for reviews */
+  letter-spacing: normal;
+}
+
+.reviewText {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-4);
+  flex-grow: 1;
+}
+
+.reviewerInfo {
+  border-top: 1px solid var(--color-surface-alt);
+  padding-top: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.authorBadge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.verifiedIcon {
+  color: #10B981; /* Premium emerald green verified checkmark */
+  flex-shrink: 0;
+}
+
+.role {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* Carousel Dots */
+.carouselDots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-6);
+}
+
+.dot {
+  border: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-text-muted);
+  opacity: 0.4;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
+}
+
+.dot:hover {
+  opacity: 0.75;
+}
+
+.dotActive {
+  background-color: var(--color-accent);
+  opacity: 1;
+  width: 20px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+  .ratingBox {
+    justify-content: center;
+  }
+  .drawerInner {
+    padding: var(--space-6) 0;
+  }
+  .drawerTitle {
+    font-size: 1.5rem;
+  }
+  .carouselContainer {
+    gap: var(--space-2);
+  }
+  .carouselBtn {
+    width: 36px;
+    height: 36px;
+  }
+  .reviewSlide {
+    padding: var(--space-1) var(--space-2);
+  }
+  .reviewCard {
+    padding: var(--space-4);
+  }
+}
