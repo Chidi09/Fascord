@@ -51,7 +51,7 @@ export default function Footer() {
           {/* Brand Info Column */}
           <div className={styles.brandCol}>
             <Image 
-              src="/logo.jpeg" 
+              src="/new-image.png" 
               alt="Fascord Limited Logo" 
               width={200} 
               height={62} 
