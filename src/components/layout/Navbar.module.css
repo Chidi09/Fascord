@@ -43,7 +43,6 @@
   object-fit: contain;
   width: 100%;
   height: auto;
-  filter: brightness(0) invert(1); /* Render the dark navy logo as white in header */
   transition: transform var(--transition-fast);
 }
 

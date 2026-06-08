@@ -43,7 +43,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className={styles.bgWrapper}>
         <Image 
-          src="/images/hero-full.jpg" 
+          src="/hero.jpeg" 
           alt="Fascord Global Transport Fleet" 
           fill
           priority

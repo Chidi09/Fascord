@@ -42,7 +42,7 @@ export default function Navbar() {
           <Link href="/" className={styles.logoLink}>
             <div className={styles.logoWrapper}>
               <Image 
-                src="/images/fascord-logo.png" 
+                src="/logo.jpeg" 
                 alt="Fascord Limited Logo" 
                 width={200} 
                 height={62} 
