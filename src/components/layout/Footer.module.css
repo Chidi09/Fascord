@@ -53,7 +53,7 @@
 .brandDesc {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #B4BCCF;
+  color: #b4bccf;
 }
 
 .socials {
@@ -106,7 +106,7 @@
 
 .link {
   font-size: 0.95rem;
-  color: #B4BCCF;
+  color: #b4bccf;
   display: flex;
   align-items: center;
   gap: var(--space-2);
@@ -130,7 +130,7 @@
   align-items: flex-start;
   gap: var(--space-3);
   font-size: 0.95rem;
-  color: #B4BCCF;
+  color: #b4bccf;
   line-height: 1.5;
 }
 
@@ -217,7 +217,7 @@
 }
 
 .newsletterText p {
-  color: #B4BCCF;
+  color: #b4bccf;
   font-size: 0.9rem;
   line-height: 1.4;
 }
@@ -244,7 +244,9 @@
   color: var(--color-white);
   outline: none;
   font-size: 0.95rem;
-  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+  transition:
+    border-color var(--transition-fast),
+    background-color var(--transition-fast);
 }
 
 .newsletterInput:focus {
@@ -274,4 +276,3 @@
 .newsletterSubmit:hover {
   background-color: var(--color-accent-hover);
 }
-

@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import React from 'react';
-import styles from './StatsBar.module.css';
+import React from "react";
+import styles from "./StatsBar.module.css";
 
 export default function StatsBar() {
   const stats = [
-    { number: '220+', label: 'Countries Served' },
-    { number: '15M+', label: 'Deliveries Made' },
-    { number: '99.8%', label: 'On-Time Accuracy' },
-    { number: '250+', label: 'Regional Depots' },
+    { number: "220+", label: "Countries Served" },
+    { number: "15M+", label: "Deliveries Made" },
+    { number: "99.8%", label: "On-Time Accuracy" },
+    { number: "250+", label: "Regional Depots" },
   ];
 
   return (

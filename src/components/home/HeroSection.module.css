@@ -83,7 +83,7 @@
 }
 
 .accent::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 4px;
   left: 0;
@@ -386,4 +386,3 @@
     align-self: stretch;
   }
 }
-

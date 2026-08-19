@@ -173,7 +173,9 @@
   border-radius: var(--radius-lg);
   padding: var(--space-8);
   border: 1px solid var(--color-border);
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
 }
 
 .infoCard:hover {
@@ -314,7 +316,8 @@
   text-align: left;
 }
 
-.table th, .table td {
+.table th,
+.table td {
   padding: var(--space-4) var(--space-6);
   font-size: 0.95rem;
 }
@@ -346,7 +349,7 @@
 }
 
 .acc {
-  color: #1E3A1E; /* Deep forest green */
+  color: #1e3a1e; /* Deep forest green */
   font-weight: 600;
   background-color: rgba(30, 58, 30, 0.03);
 }
@@ -468,7 +471,9 @@
   text-decoration: none;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
-  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  transition:
+    background-color var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .ctaPrimary:hover {
@@ -488,7 +493,9 @@
   text-decoration: none;
   border-radius: var(--radius-md);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  transition:
+    background-color var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .ctaSecondary:hover {
@@ -504,7 +511,8 @@
     flex-direction: column;
     gap: var(--space-3);
   }
-  .ctaPrimary, .ctaSecondary {
+  .ctaPrimary,
+  .ctaSecondary {
     width: 100%;
   }
 }

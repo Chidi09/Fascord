@@ -61,7 +61,9 @@
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   background-color: var(--color-white);
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
   min-height: 480px;
   display: flex;
   flex-direction: column;
@@ -171,7 +173,9 @@
   background-color: rgba(255, 255, 255, 0.1);
   padding: var(--space-3) var(--space-4);
   border-radius: var(--radius-md);
-  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  transition:
+    background-color var(--transition-fast),
+    transform var(--transition-fast);
   align-self: flex-start;
   width: 100%;
   justify-content: space-between;

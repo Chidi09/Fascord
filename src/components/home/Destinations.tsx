@@ -1,20 +1,25 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Link from 'next/link';
-import { Plane, ArrowRight } from 'lucide-react';
-import styles from './Destinations.module.css';
+import React from "react";
+import Link from "next/link";
+import { Plane, ArrowRight } from "lucide-react";
+import styles from "./Destinations.module.css";
 
 export default function Destinations() {
   const routes = [
-    { country: 'United States', flag: '🇺🇸', code: 'USA', time: '1-2 Days Transit' },
-    { country: 'Germany', flag: '🇩🇪', code: 'DEU', time: '1 Day Transit' },
-    { country: 'Canada', flag: '🇨🇦', code: 'CAN', time: '2 Days Transit' },
-    { country: 'Nigeria', flag: '🇳🇬', code: 'NGA', time: '3 Days Transit' },
-    { country: 'Australia', flag: '🇦🇺', code: 'AUS', time: '3-4 Days Transit' },
-    { country: 'China', flag: '🇨🇳', code: 'CHN', time: '2-3 Days Transit' },
-    { country: 'France', flag: '🇫🇷', code: 'FRA', time: '1 Day Transit' },
-    { country: 'India', flag: '🇮🇳', code: 'IND', time: '2-3 Days Transit' },
+    {
+      country: "United States",
+      flag: "🇺🇸",
+      code: "USA",
+      time: "1-2 Days Transit",
+    },
+    { country: "Germany", flag: "🇩🇪", code: "DEU", time: "1 Day Transit" },
+    { country: "Canada", flag: "🇨🇦", code: "CAN", time: "2 Days Transit" },
+    { country: "Nigeria", flag: "🇳🇬", code: "NGA", time: "3 Days Transit" },
+    { country: "Australia", flag: "🇦🇺", code: "AUS", time: "3-4 Days Transit" },
+    { country: "China", flag: "🇨🇳", code: "CHN", time: "2-3 Days Transit" },
+    { country: "France", flag: "🇫🇷", code: "FRA", time: "1 Day Transit" },
+    { country: "India", flag: "🇮🇳", code: "IND", time: "2-3 Days Transit" },
   ];
 
   return (
@@ -24,7 +29,8 @@ export default function Destinations() {
           <span className={styles.tag}>POPULAR SHIPPING ROUTES</span>
           <h2 className={styles.title}>EXPANDING YOUR GLOBAL REACH</h2>
           <p className={styles.subtitle}>
-            Fascord connects your business directly to major international commerce hubs with dedicated weekly flights and freight networks.
+            Fascord connects your business directly to major international
+            commerce hubs with dedicated weekly flights and freight networks.
           </p>
         </div>
 
@@ -37,10 +43,12 @@ export default function Destinations() {
               </div>
               <div className={styles.info}>
                 <h3 className={styles.countryName}>{r.country}</h3>
-                <span className={styles.time}><Plane size={12} className={styles.planeIcon} /> {r.time}</span>
+                <span className={styles.time}>
+                  <Plane size={12} className={styles.planeIcon} /> {r.time}
+                </span>
               </div>
-              <Link 
-                href={`/quote?origin=United+Kingdom&destination=${encodeURIComponent(r.country)}`} 
+              <Link
+                href={`/quote?origin=United+Kingdom&destination=${encodeURIComponent(r.country)}`}
                 className={styles.link}
                 aria-label={`Get shipping quote for ${r.country}`}
               >

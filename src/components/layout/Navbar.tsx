@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { usePathname } from 'next/navigation';
-import { Menu, X } from 'lucide-react';
-import styles from './Navbar.module.css';
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
+import styles from "./Navbar.module.css";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,32 +20,30 @@ export default function Navbar() {
         setScrolled(false);
       }
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
-
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Track Parcel', path: '/track' },
-    { name: 'Our Services', path: '/services' },
-    { name: 'Sending Gifts', path: '/sending-gifts' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Contact', path: '/contact' },
+    { name: "Home", path: "/" },
+    { name: "Track Parcel", path: "/track" },
+    { name: "Our Services", path: "/services" },
+    { name: "Sending Gifts", path: "/sending-gifts" },
+    { name: "About Us", path: "/about" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
     <>
-      <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
+      <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
         <div className={`container ${styles.container}`}>
           <Link href="/" className={styles.logoLink}>
             <div className={styles.logoWrapper}>
-              <Image 
-                src="/new-image.png" 
-                alt="Fascord Limited Logo" 
-                width={200} 
-                height={62} 
+              <Image
+                src="/new-image.png"
+                alt="Fascord Limited Logo"
+                width={200}
+                height={62}
                 className={styles.logo}
                 priority
               />
@@ -59,9 +57,9 @@ export default function Navbar() {
                 const isActive = pathname === link.path;
                 return (
                   <li key={link.name} className={styles.navItem}>
-                    <Link 
-                      href={link.path} 
-                      className={`${styles.navLink} ${isActive ? styles.active : ''}`}
+                    <Link
+                      href={link.path}
+                      className={`${styles.navLink} ${isActive ? styles.active : ""}`}
                     >
                       {link.name}
                     </Link>
@@ -75,10 +73,10 @@ export default function Navbar() {
             <Link href="/quote" className={styles.ctaButton}>
               GET A QUOTE
             </Link>
-            
+
             {/* Hamburger Button */}
-            <button 
-              className={styles.mobileToggle} 
+            <button
+              className={styles.mobileToggle}
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >
@@ -88,16 +86,18 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Navigation Drawer */}
-        <div className={`${styles.mobileDrawer} ${isOpen ? styles.drawerOpen : ''}`}>
+        <div
+          className={`${styles.mobileDrawer} ${isOpen ? styles.drawerOpen : ""}`}
+        >
           <nav className={styles.mobileNav}>
             <ul className={styles.mobileNavList}>
               {navLinks.map((link) => {
                 const isActive = pathname === link.path;
                 return (
                   <li key={link.name}>
-                    <Link 
-                      href={link.path} 
-                      className={`${styles.mobileNavLink} ${isActive ? styles.mobileActive : ''}`}
+                    <Link
+                      href={link.path}
+                      className={`${styles.mobileNavLink} ${isActive ? styles.mobileActive : ""}`}
                       onClick={() => setIsOpen(false)}
                     >
                       {link.name}
@@ -107,8 +107,8 @@ export default function Navbar() {
               })}
             </ul>
             <div className={styles.mobileFooter}>
-              <Link 
-                href="/quote" 
+              <Link
+                href="/quote"
                 className={styles.mobileCta}
                 onClick={() => setIsOpen(false)}
               >

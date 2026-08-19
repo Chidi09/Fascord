@@ -29,8 +29,8 @@
 }
 
 .starFilled {
-  fill: #FFC72C; /* Gold star color */
-  color: #FFC72C;
+  fill: #ffc72c; /* Gold star color */
+  color: #ffc72c;
 }
 
 .ratingValue {
@@ -62,7 +62,9 @@
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast);
   position: relative;
   z-index: 15;
 }
@@ -185,7 +187,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
   text-align: left;
 }
 
@@ -245,7 +249,7 @@
 }
 
 .verifiedIcon {
-  color: #10B981; /* Premium emerald green verified checkmark */
+  color: #10b981; /* Premium emerald green verified checkmark */
   flex-shrink: 0;
 }
 

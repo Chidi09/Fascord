@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { AlertCircle } from 'lucide-react';
-import styles from './TopBanner.module.css';
+import React from "react";
+import { AlertCircle } from "lucide-react";
+import styles from "./TopBanner.module.css";
 
 export default function TopBanner() {
   return (
@@ -11,7 +11,8 @@ export default function TopBanner() {
         <div className={styles.content}>
           <AlertCircle className={styles.icon} size={16} />
           <span className={styles.text}>
-            <strong>Service Notice:</strong> Standard shipping routes operate normally. High volume delays may occur on cross-channel shipping.
+            <strong>Service Notice:</strong> Standard shipping routes operate
+            normally. High volume delays may occur on cross-channel shipping.
           </span>
         </div>
       </div>

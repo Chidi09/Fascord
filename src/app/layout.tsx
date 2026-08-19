@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Barlow_Condensed, Inter } from "next/font/google";
 import "./globals.css";
 import { MswProvider } from "@/mocks/MswProvider";
+import QueryProvider from "@/providers/QueryProvider";
 
 const barlowCondensed = Barlow_Condensed({
   variable: "--font-barlow-condensed",
@@ -16,9 +17,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Fascord Limited | Premium Global Express Logistics & Courier Services",
-  description: "Fascord Limited provides fast, reliable logistics and courier solutions across the UK and worldwide. Get a quote, book a shipment, or track your package in real-time.",
-  keywords: "logistics, shipping, express courier, parcel delivery, global cargo, freight forwarder, UK delivery",
+  title:
+    "Fascord Limited | Premium Global Express Logistics & Courier Services",
+  description:
+    "Fascord Limited provides fast, reliable logistics and courier solutions across the UK and worldwide. Get a quote, book a shipment, or track your package in real-time.",
+  keywords:
+    "logistics, shipping, express courier, parcel delivery, global cargo, freight forwarder, UK delivery",
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -39,12 +43,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${barlowCondensed.variable} ${inter.variable}`}>
-      <body style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-        <MswProvider>
-          {children}
-        </MswProvider>
+      <body
+        style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+      >
+        <QueryProvider>
+          <MswProvider>{children}</MswProvider>
+        </QueryProvider>
       </body>
     </html>
   );
 }
-

@@ -1,33 +1,33 @@
 /* Color Tokens */
 :root {
-  --color-primary: #1A2756;        /* Navy */
-  --color-primary-light: #2A3C7A;
-  --color-primary-dark: #0D1A3A;
-  --color-accent: #F25C05;         /* Orange */
-  --color-accent-hover: #D04D02;
-  --color-white: #FFFFFF;
-  --color-surface: #F5F7FA;
-  --color-surface-alt: #EEF1F7;
-  --color-border: #D9DCE3;
-  --color-text-primary: #1A2756;
-  --color-text-secondary: #4A5568;
-  --color-text-muted: #8A93A8;
+  --color-primary: #1a2756; /* Navy */
+  --color-primary-light: #2a3c7a;
+  --color-primary-dark: #0d1a3a;
+  --color-accent: #f25c05; /* Orange */
+  --color-accent-hover: #d04d02;
+  --color-white: #ffffff;
+  --color-surface: #f5f7fa;
+  --color-surface-alt: #eef1f7;
+  --color-border: #d9dce3;
+  --color-text-primary: #1a2756;
+  --color-text-secondary: #4a5568;
+  --color-text-muted: #8a93a8;
 
   /* Typography Fonts */
-  --font-display: var(--font-barlow-condensed), 'Arial Black', sans-serif;
+  --font-display: var(--font-barlow-condensed), "Arial Black", sans-serif;
   --font-body: var(--font-inter), sans-serif;
 
   /* Spacing Scale (8pt grid) */
-  --space-1: 0.25rem;   /* 4px */
-  --space-2: 0.5rem;    /* 8px */
-  --space-3: 0.75rem;   /* 12px */
-  --space-4: 1rem;      /* 16px */
-  --space-6: 1.5rem;    /* 24px */
-  --space-8: 2rem;      /* 32px */
-  --space-12: 3rem;     /* 48px */
-  --space-16: 4rem;     /* 64px */
-  --space-20: 5rem;     /* 80px */
-  --space-24: 6rem;     /* 96px */
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem; /* 8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1rem; /* 16px */
+  --space-6: 1.5rem; /* 24px */
+  --space-8: 2rem; /* 32px */
+  --space-12: 3rem; /* 48px */
+  --space-16: 4rem; /* 64px */
+  --space-20: 5rem; /* 80px */
+  --space-24: 6rem; /* 96px */
 
   /* Border Radius */
   --radius-sm: 4px;
@@ -37,10 +37,10 @@
   --radius-pill: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 1px 4px rgba(26,39,86,0.08);
-  --shadow-md: 0 4px 16px rgba(26,39,86,0.12);
-  --shadow-lg: 0 8px 32px rgba(26,39,86,0.18);
-  --shadow-accent: 0 4px 20px rgba(242,92,5,0.3);
+  --shadow-sm: 0 1px 4px rgba(26, 39, 86, 0.08);
+  --shadow-md: 0 4px 16px rgba(26, 39, 86, 0.12);
+  --shadow-lg: 0 8px 32px rgba(26, 39, 86, 0.18);
+  --shadow-accent: 0 4px 20px rgba(242, 92, 5, 0.3);
 
   /* Transitions */
   --transition-fast: 150ms ease;

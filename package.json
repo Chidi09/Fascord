@@ -3,18 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "dev": "bun --bun next dev",
+    "build": "bun x prisma generate && bun --bun next build",
+    "start": "bun --bun next start",
+    "lint": "bun --bun eslint",
+    "format": "bun x prettier --write .",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
+    "@prisma/client": "^6.4.1",
+    "@tanstack/react-query": "^5.101.4",
     "framer-motion": "^12.39.0",
     "lucide-react": "^1.16.0",
     "next": "16.2.6",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "react-hook-form": "^7.76.0"
+    "react-hook-form": "^7.76.0",
+    "zod": "^4.4.3",
+    "zustand": "^5.0.15"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -23,6 +29,8 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
     "msw": "^2.14.6",
+    "prettier": "^3.9.6",
+    "prisma": "^6.4.1",
     "typescript": "^5"
   },
   "msw": {
