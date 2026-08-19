@@ -14,6 +14,7 @@ import {
 import TopBanner from "@/components/layout/TopBanner";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { FaqJsonLd } from "@/components/seo/JsonLd";
 import styles from "./sending-gifts.module.css";
 
 export default function SendingGiftsPage() {
@@ -104,6 +105,7 @@ export default function SendingGiftsPage() {
 
   return (
     <>
+      <FaqJsonLd faqs={faqs} />
       <TopBanner />
       <Navbar />
 
