@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "bun --bun next dev",
-    "build": "bun x prisma generate && bun --bun next build",
-    "start": "bun --bun next start",
-    "lint": "bun --bun eslint",
-    "format": "bun x prettier --write .",
+    "dev": "next dev",
+    "build": "prisma generate && next build",
+    "start": "next start",
+    "lint": "eslint",
+    "format": "prettier --write .",
     "postinstall": "prisma generate"
   },
   "dependencies": {
